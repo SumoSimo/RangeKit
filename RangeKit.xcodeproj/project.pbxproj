@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5E0FF3DD1DD7ABED00610E0D /* RangeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0FF3D31DD7ABED00610E0D /* RangeKit.framework */; };
-		5E0FF3E21DD7ABED00610E0D /* RangeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FF3E11DD7ABED00610E0D /* RangeKitTests.swift */; };
 		5E0FF3E41DD7ABED00610E0D /* RangeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0FF3D61DD7ABED00610E0D /* RangeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E0FF3F01DD7D65500610E0D /* CountableRangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FF3EF1DD7D65500610E0D /* CountableRangeExtensions.swift */; };
+		5E0FF3F21DD7DFFD00610E0D /* CountableRangeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FF3F11DD7DFFD00610E0D /* CountableRangeExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		5E0FF3D61DD7ABED00610E0D /* RangeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeKit.h; sourceTree = "<group>"; };
 		5E0FF3D71DD7ABED00610E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E0FF3DC1DD7ABED00610E0D /* RangeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RangeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E0FF3E11DD7ABED00610E0D /* RangeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeKitTests.swift; sourceTree = "<group>"; };
 		5E0FF3E31DD7ABED00610E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E0FF3EF1DD7D65500610E0D /* CountableRangeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensions.swift; sourceTree = "<group>"; };
+		5E0FF3F11DD7DFFD00610E0D /* CountableRangeExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				5E0FF3D61DD7ABED00610E0D /* RangeKit.h */,
 				5E0FF3D71DD7ABED00610E0D /* Info.plist */,
+				5E0FF3EF1DD7D65500610E0D /* CountableRangeExtensions.swift */,
 			);
 			path = RangeKit;
 			sourceTree = "<group>";
@@ -80,8 +83,8 @@
 		5E0FF3E01DD7ABED00610E0D /* RangeKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E0FF3E11DD7ABED00610E0D /* RangeKitTests.swift */,
 				5E0FF3E31DD7ABED00610E0D /* Info.plist */,
+				5E0FF3F11DD7DFFD00610E0D /* CountableRangeExtensionsTests.swift */,
 			);
 			path = RangeKitTests;
 			sourceTree = "<group>";
@@ -149,11 +152,13 @@
 					5E0FF3D21DD7ABED00610E0D = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = QWKKLM397G;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					5E0FF3DB1DD7ABED00610E0D = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = QWKKLM397G;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -198,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0FF3F01DD7D65500610E0D /* CountableRangeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E0FF3E21DD7ABED00610E0D /* RangeKitTests.swift in Sources */,
+				5E0FF3F21DD7DFFD00610E0D /* CountableRangeExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +328,7 @@
 		5E0FF3E81DD7ABED00610E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QWKKLM397G;
@@ -334,6 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.simontsai.RangeKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +349,7 @@
 		5E0FF3E91DD7ABED00610E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QWKKLM397G;
@@ -360,11 +369,14 @@
 		5E0FF3EB1DD7ABED00610E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QWKKLM397G;
 				INFOPLIST_FILE = RangeKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simontsai.RangeKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -372,6 +384,8 @@
 		5E0FF3EC1DD7ABED00610E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QWKKLM397G;
 				INFOPLIST_FILE = RangeKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
