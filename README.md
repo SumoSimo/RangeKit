@@ -38,3 +38,5 @@ let resultingRanges = topRange.split(against: bottomRange)
 ```
 
 This results in an array containing CountableRange(uncheckedBounds: (lower: 7, upper: 10))
+
+Note: If you're using a different kind of range (e.g. ClosedRange), you can pass it into the CountableRange initializer.
